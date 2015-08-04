@@ -1,0 +1,5 @@
+fg2server:
+  build: .
+  restart: no
+  ports:
+    - "8123:8123"
