@@ -1,0 +1,5 @@
+fg2server:
+  image: tutum.co/mhubig/fg2server
+  restart: no
+  ports:
+    - "8123:8123"
