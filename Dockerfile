@@ -20,6 +20,13 @@ RUN mkdir -p /tmp/fg2n_decode && cd /tmp/fg2n_decode \
     && cp ./decode_ubx64 /usr/src/app/fg2decode \
     && rm -rf /tmp/fg2n_decode
 
+RUN mkdir -p /tmp/fg2n_decode2 && cd /tmp/fg2n_decode2 \
+    && curl -SLO ftp://80.153.164.175/serverdev/decode2_150804.zip \
+    && unzip decode2_150804.zip \
+    && sh ./make_decode2_ubx64.sh \
+    && cp ./decode2_ubx64 /usr/src/app/fg2decode2 \
+    && rm -rf /tmp/fg2n_decode2
+
 COPY fg2serv.ini /usr/src/app/
 
 EXPOSE 8123
