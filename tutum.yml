@@ -2,8 +2,10 @@ fg2api:
   image: tutum.co/mhubig/fg2api
   restart: always
   autoredeploy: true
-  links: fg2server
-  volumes_from: fg2server
+  links:
+    - fg2server
+  volumes_from:
+    - fg2server
   ports:
     - "80:80"
 
