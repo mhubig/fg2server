@@ -1,6 +1,6 @@
 ## A Docker image for the FG2 Server deamon
 
-    Version 0.1.0
+    Version 0.1.1
 
 At the moment it's all just play and fun ...
 
