@@ -1,5 +1,12 @@
 fg2server:
-  build: .
+  build: fg2server
   restart: no
   ports:
     - "8123:8123"
+  links:
+    - fg2api
+
+fg2api:
+  build: fg2api
+  restart: no
+    - "80:80"
