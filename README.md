@@ -2,7 +2,7 @@
 
     Version 0.1.0
 
-At the moment ist all it's just play and fun ...
+At the moment it's all just play and fun ...
 
 [![Deploy to Tutum](https://s.tutum.co/deploy-to-tutum.svg)][1]
 
