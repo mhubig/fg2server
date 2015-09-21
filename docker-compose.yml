@@ -1,12 +1,19 @@
-fg2server:
-  build: fg2server
-  restart: no
-  ports:
-    - "8123:8123"
-  links:
-    - fg2api
-
 fg2api:
   build: fg2api
   restart: no
+  links:
+    - fg2server
+  volumes:
+    - ./fg2api:/usr/src/fg2api
+  volumes_from:
+    - fg2server
+  ports:
     - "80:80"
+
+fg2server:
+  build: fg2server
+  restart: no
+  volumes:
+    - ./fg2server/data:/usr/src/fg2server/data
+  ports:
+    - "8123:8123"
